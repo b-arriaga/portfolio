@@ -153,7 +153,7 @@
     /* Scale down the folder size */
     .folder {
       width: 90%;  /* Use percentage for responsiveness */
-      margin-top: -20rem; /* Adjust overlap as needed for mobile */
+      margin-top: 0rem; /* Adjust overlap as needed for mobile */
     }
   
     /* Optional: Remove or adjust hover effects since they may not apply on mobile */
