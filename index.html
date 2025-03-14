@@ -68,5 +68,13 @@
 
 
 
+    <script>
+        document.querySelectorAll('.folder').forEach(folder => {
+          folder.addEventListener('click', function () {
+            // Toggle the active state
+            folder.classList.toggle('active');
+          });
+        });
+      </script>
 </body>
 </html>

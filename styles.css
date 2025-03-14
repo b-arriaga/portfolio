@@ -103,6 +103,11 @@
     z-index: 1;
   }
 
+  .folder.active {
+    transform: translateY(-200px);  /* Adjust for a more pronounced pop-out effect */
+    z-index: 1000;                 /* Make sure it appears on top */
+  }
+
 
 
   .swash-letter {
