@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 915.32 767.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f8becc;
+        stroke: #e96891;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        font-family: FormaDJRMicro-Medium, 'Forma DJR Micro';
+        font-size: 25px;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_8" data-name="Layer 8">
+    <g>
+      <path class="cls-1" d="M879.79,101.64c-9.09.95-14.88-3.81-16.04-13.35l-8.11-26.82c-2.32-8.46-13.77-10.32-20.85-10.32l-234.92.46-258.1.5c-5.45-.93-12.08-4.16-14.3-9.42l-8.33-19.98-4.44-10.65c-3.72-7.67-14.83-10.55-20.74-10.55l-108.49.26-108.49-.26c-5.91,0-17.02,2.89-20.74,10.55l-12.76,30.63c-2.53,6-10.8,9.37-16.51,9.68v.39c-10.31.69-16.64,12.69-16.64,18.36L3.15,706.65c59,0,803.9-7.38,877.65-7.38l11.81-545.94v-40.72c0-5.83-5.74-10.98-12.82-10.98Z"/>
+      <rect class="cls-2" x="32.53" y="89.15" width="807.5" height="557" rx="10" ry="10"/>
+      <path class="cls-1" d="M864.32,765.65l-829.12-6.91c-21.01.04-33.79-8.6-33.7-30.86L43.54,146.3c0-14.75,7.38-36.88,29.5-36.88l803.9,14.75c14.75,0,36.88,0,36.88,22.13l-28.6,600.59c-2.71,12.8-10.39,17.96-20.9,18.76Z"/>
+    </g>
+  </g>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <text class="cls-4" transform="translate(111.54 34.06)"><tspan class="cls-7" x="0" y="0">P</tspan><tspan x="14.9" y="0">ri</tspan><tspan class="cls-5" x="30.57" y="0">n</tspan><tspan class="cls-3" x="44.25" y="0">t</tspan><tspan x="52.7" y="0">ed Zin</tspan><tspan class="cls-6" x="120.67" y="0">e</tspan><tspan x="134.62" y="0">s</tspan></text>
+  </g>
+</svg>

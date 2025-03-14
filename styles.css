@@ -1,0 +1,112 @@
+/* ========== Global Reset / Basic Setup ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #fbe2e4;
+    font-family: sans-serif;
+    min-height: 100vh;
+    /* NO flex on the body */
+  }
+  
+  /* ===== Page Title (Client’s Name) in normal flow ===== */
+  .client-name {
+    font-family: "adobe-caslon-pro", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 5rem;
+    margin: 2rem; /* Just give it some space */
+    color: #e96891;
+  }
+  
+  /* MAIN CONTENT: two-column flex */
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: flex-start;
+  }
+  
+  /* LEFT BOX: text & links */
+  .left-box {
+    position: sticky;
+    top: 2rem;
+    flex: 0 0 300px;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    border: 3px solid #e96891;
+  }
+  
+  .left-box h2 { font-family: "adobe-caslon-pro", serif;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 0rem; 
+    font-size: 3rem;
+}
+  .left-box p  {font-family: "forma-djr-micro", sans-serif; 
+    margin-bottom: 1rem; 
+    line-height: 1.4; }
+
+
+  .links-container {
+    font-family: "adobe-caslon-pro", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .links-container a {
+    color: #e96891; 
+  }
+  
+  /* RIGHT COLUMN: vertical stack of folders */
+  .folder-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    padding: 0rem 0;
+  }
+  
+  /* Individual folder styling */
+  .folder {
+    width: 50rem; /* smaller than 50rem so they don't fill the screen */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: -41rem;
+    
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .folder:first-of-type { margin-top: 0; }
+  
+  .folder:hover {
+    transform: translateY(-25px);
+    z-index: 1;
+  }
+
+
+
+  .swash-letter {
+    -moz-font-feature-settings: "swsh";
+    -webkit-font-feature-settings: "swsh";
+    font-feature-settings: "swsh" 1;
+  }

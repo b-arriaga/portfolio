@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 915.33 763.72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5a8bb;
+        stroke: #e96891;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        font-family: FormaDJRMicro-Medium, 'Forma DJR Micro';
+        font-size: 25px;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <g id="Layer_8" data-name="Layer 8">
+    <g>
+      <path class="cls-1" d="M878.22,100.68c-9.1.94-14.89-3.74-16.05-13.1l-8.12-26.31c-2.32-8.3-13.78-10.12-20.87-10.12l-15.1.03c-5.48-.88-12.21-4.06-14.46-9.26l-12.77-30.05c-3.73-7.52-14.85-10.35-20.76-10.35l-108.58.26-108.58-.26c-5.91,0-17.03,2.83-20.76,10.35l-12.77,30.05c-2.66,6.18-11.65,9.52-17.36,9.52h-.97c0,.14-3.96.26-3.96.26-.48,0-.96.04-1.42.1l-470.12.9c-10.84.03-17.54,12.33-17.54,18.04l-.32,80.29h.57S1.52,703.22,1.52,703.22c59,0,803.9-7.38,877.65-7.38l11.81-545.94v-.43h.06v-38.03c0-5.72-5.74-10.77-12.83-10.77Z"/>
+      <rect class="cls-3" x="32.54" y="85.72" width="807.5" height="557" rx="10" ry="10"/>
+      <path class="cls-1" d="M864.33,762.22l-829.12-6.91c-21.01.04-33.79-8.6-33.7-30.86L43.56,142.87c0-14.75,7.38-36.88,29.5-36.88l803.9,14.75c14.75,0,36.88,0,36.88,22.13l-28.6,600.59c-2.71,12.8-10.39,17.96-20.9,18.76Z"/>
+    </g>
+  </g>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <text class="cls-6" transform="translate(586.93 32.08)"><tspan x="0" y="0">Sh</tspan><tspan class="cls-5" x="29.98" y="0">ow</tspan><tspan x="61.43" y="0">e</tspan><tspan class="cls-4" x="75.58" y="0">r</tspan><tspan x="85" y="0"> </tspan><tspan class="cls-2" x="89.92" y="0">S</tspan><tspan x="105.97" y="0">oda</tspan></text>
+  </g>
+</svg>
