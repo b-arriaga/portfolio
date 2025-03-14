@@ -115,3 +115,53 @@
     -webkit-font-feature-settings: "swsh";
     font-feature-settings: "swsh" 1;
   }
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    /* Convert main content from two columns to one */
+    .main-content {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    /* Adjust left box to be full-width and repositioned */
+    .left-box {
+      position: relative;
+      top: 0;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    /* Adjust folder-column layout for mobile */
+    .folder-column {
+      width: 100%;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  
+    /* Scale down the folder size */
+    .folder {
+      width: 90%;  /* Use percentage for responsiveness */
+      margin-top: -20rem; /* Adjust overlap as needed for mobile */
+    }
+  
+    /* Optional: Remove or adjust hover effects since they may not apply on mobile */
+    .folder:hover {
+      transform: none;
+    }
+  
+    /* Active state can still work on tap */
+    .folder.active {
+      transform: translateY(-20px); /* Adjust the pop-out effect for mobile */
+    }
+  }
