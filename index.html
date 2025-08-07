@@ -15,7 +15,7 @@
   <!-- Adobe Typekit fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ljg1vjr.css">
   <!-- Portfolio styles -->
-  <link rel="stylesheet" href="styles_updated.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -91,6 +91,42 @@
             </a>
         </section>
     </main>
+    
+    <!-- Modal overlay for displaying project pages inline -->
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close" aria-label="Close project view">&times;</button>
+            <iframe id="modal-iframe" class="modal-iframe" src="" title="Project details"></iframe>
+        </div>
+    </div>
+
+    <script>
+    // Attach click handlers to each project link to open content in a modal
+    document.querySelectorAll('.project-folder-link').forEach(function(link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const url = link.getAttribute('href');
+            const iframe = document.getElementById('modal-iframe');
+            iframe.src = url;
+            document.getElementById('modal-overlay').style.display = 'flex';
+            // prevent background page from scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    // Close button handler
+    document.getElementById('modal-close').addEventListener('click', function() {
+        document.getElementById('modal-overlay').style.display = 'none';
+        const iframe = document.getElementById('modal-iframe');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    });
+    // Close modal when clicking outside the content area
+    document.getElementById('modal-overlay').addEventListener('click', function(e) {
+        if (e.target === this) {
+            document.getElementById('modal-close').click();
+        }
+    });
+    </script>
 
 </body>
 </html>
