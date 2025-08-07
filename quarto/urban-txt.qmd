@@ -1,0 +1,57 @@
+---
+title: "UrbanTXT Makerspace"
+subtitle: "Bellissima Arriaga-Pattillo"
+format: 
+  html:
+    embed-resources: true
+    theme: theme.scss
+    lightbox: true
+    smooth-scroll: true
+    anchor-sections: true
+    page-layout: full
+editor: source
+---
+
+## Project Overview
+
+Led the strategic vision and development of a 2,000 sq. ft. makerspace in South LA. Authored the master plan, floor plan, and phased implementation strategy, collaborating with Urban TXT leadership to create a studio that scales with program growth and teaches the tech skills local youth need to thrive.
+
+To see more, <a href="https://www.instagram.com/stories/highlights/17927381819233189/?hl=en">visit our Instagram highlights</a> or visit us at <a href="https://www.google.com/maps/search/?api=1&query=2318+S+Union+Ave,+Los+Angeles">2318 S Union Ave, Los Angeles</a> weekdays 10am - 5pm.
+
+## Skills Developed
+
+-   Human-Centered Space Design
+-   Equipment & Furniture Specification
+-   Community Engagement & Stakeholder Alignment
+-   Scalable Curriculum Development
+-   Strategic Planning for the Future of Learning
+
+---
+
+## Project Photos
+
+::: {.gallery layout-ncol=3}
+
+![](UrbanTXT_img/UrbanTXT_1@300x.png){fig-alt="UrbanTXT Image 1"}
+
+![](UrbanTXT_img/UrbanTXT_2@300x.png){fig-alt="UrbanTXT Image 2"}
+
+![](UrbanTXT_img/UrbanTXT_3@300x.png){fig-alt="UrbanTXT Image 3"}
+
+![](UrbanTXT_img/UrbanTXT_4@300x.png){fig-alt="UrbanTXT Image 4"}
+
+![](UrbanTXT_img/UrbanTXT_5@300x.png){fig-alt="UrbanTXT Image 5"}
+
+![](UrbanTXT_img/UrbanTXT_6@300x.png){fig-alt="UrbanTXT Image 6"}
+
+![](UrbanTXT_img/UrbanTXT_7@300x.png){fig-alt="UrbanTXT Image 7"}
+
+![](UrbanTXT_img/UrbanTXT_8@300x.png){fig-alt="UrbanTXT Image 8"}
+
+![](UrbanTXT_img/UrbanTXT_9@300x.png){fig-alt="UrbanTXT Image 9"}
+
+![](UrbanTXT_img/UrbanTXT_10@300x.png){fig-alt="UrbanTXT Image 10"}
+
+:::
+
+

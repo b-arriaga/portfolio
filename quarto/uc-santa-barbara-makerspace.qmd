@@ -1,0 +1,59 @@
+---
+title: "UC Santa Barbara Library Makerspace"
+subtitle: "Bellissima Arriaga-Pattillo"
+format: 
+  html:
+    embed-resources: true
+    theme: theme.scss
+    lightbox: true
+    smooth-scroll: true
+    anchor-sections: true
+    page-layout: full
+editor: source
+---
+
+## Project Overview
+
+As lead space designer and head educator at the [UC Santa Barbara Library Makerspace](https://www.library.ucsb.edu/makerspace), I secured funding, designed, created, and built a makerspace that balances digital fabrication with traditional hand skills. Stakeholders were able to physically move scaled furniture on printed floor plans during planning sessions, helping prioritize accessibility and flexibility.
+
+I converted the lessons learned into a national conference workshop on equitable STEAM-space design.
+
+The workshops and community events I facilitated at the Makerspace supported a diverse audience across majors and skillsets. From first-time laser cutting and 3D printing classes, hobby affinity nights, and events that prioritized use of scraps and secondhand materials, community events were developed with our student, staff, and faculty needs in mind.
+
+See more of this space at: {{< video https://youtu.be/Aopcdj-LVVA >}}
+
+## Skills Developed
+
+-   Human-Centered Space Design
+-   Grant Writing & Proposal Development
+-   Workshop Design & Facilitation
+-   Training & Policy Development
+-   Strategic Planning for the Future of Learning
+
+## Project Photos
+
+::: {.gallery layout-ncol=3}
+
+![](UCSB_img/UCSB_1@300x.png){fig-alt="UCSB Image 1"}
+
+![](UCSB_img/UCSB_2@300x.png){fig-alt="UCSB Image 2"}
+
+![](UCSB_img/UCSB_3@300x.png){fig-alt="UCSB Image 3"}
+
+![](UCSB_img/UCSB_4@300x.png){fig-alt="UCSB Image 4"}
+
+![](UCSB_img/UCSB_5@300x.png){fig-alt="UCSB Image 5"}
+
+![](UCSB_img/UCSB_6@300x.png){fig-alt="UCSB Image 6"}
+
+![](UCSB_img/UCSB_7@300x.png){fig-alt="UCSB Image 7"}
+
+![](UCSB_img/UCSB_8@300x.png){fig-alt="UCSB Image 8"}
+
+![](UCSB_img/UCSB_9@300x.png){fig-alt="UCSB Image 9"}
+
+![](UCSB_img/UCSB_10@300x.png){fig-alt="UCSB Image 10"}
+
+:::
+
+

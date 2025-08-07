@@ -1,0 +1,48 @@
+---
+title: "“Five Nights at Freddy’s” Halloween Experience"
+subtitle: "Bellissima Arriaga-Pattillo"
+format: 
+  html:
+    embed-resources: true
+    theme: theme.scss
+    lightbox: true
+    smooth-scroll: true
+    anchor-sections: true
+    page-layout: full
+editor: source
+---
+
+## Project Overview
+
+Channeling a curious love of the FNAF(Five Nights at Freddy’s) franchise, I converted cardboard, broken furniture, and old Halloween decorations into a walk-through trick-or-treat experience. I also fabricated three costumes with foam, fabric, and custom 3D modeled elements. My next iteration of this fright will add an interactive queue and expand the build into a full haunted maze.
+
+## Skills Developed
+
+-   Set & Prop Fabrication
+-   3D Printing
+-   Foam Sculpting
+-   Lighting & Projection Design
+-   Experiential Storytelling
+
+## Project Photos
+
+::: {.gallery layout-ncol=3}
+
+![](FNAF_img/FNAF_1@300x.png){fig-alt="FNAF Image 1"}
+
+![](FNAF_img/FNAF_2@300x.png){fig-alt="FNAF Image 2"}
+
+![](FNAF_img/FNAF_3@300x.png){fig-alt="FNAF Image 3"}
+
+![](FNAF_img/FNAF_4@300x.png){fig-alt="FNAF Image 4"}
+
+![](FNAF_img/FNAF_5@300x.png){fig-alt="FNAF Image 5"}
+
+![](FNAF_img/FNAF_6@300x.png){fig-alt="FNAF Image 6"}
+
+![](FNAF_img/FNAF_7@300x.png){fig-alt="FNAF Image 7"}
+
+![](FNAF_img/FNAF_8@300x.png){fig-alt="FNAF Image 8"}
+
+:::
+

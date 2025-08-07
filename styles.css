@@ -1,170 +1,222 @@
-/* ========== Global Reset / Basic Setup ========== */
+/* =============================================================
+   Global reset and basic setup
+   This stylesheet preserves the typographic and color styling
+   found in the original portfolio while introducing custom
+   components for the project folders.  It is referenced by
+   `index_updated.html` and can live alongside your existing
+   stylesheets without interfering with them.
+   ============================================================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: #fbe2e4;
-    font-family: sans-serif;
-    min-height: 100vh;
-    /* NO flex on the body */
-  }
-  
-  /* ===== Page Title (Client’s Name) in normal flow ===== */
-  .client-name {
-    font-family: "adobe-caslon-pro", serif;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 4.5rem;
-    margin: 2rem; /* Just give it some space */
-    color: #e96891;
-  }
-  
-  /* MAIN CONTENT: two-column flex */
-  .main-content {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 2rem;
-    align-items: flex-start;
-  }
-  
-  /* LEFT BOX: text & links */
-  .left-box {
-    position: sticky;
-    top: 2rem;
-    flex: 0 0 300px;
-    padding: 1.5rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: flex-start;
-    border: 3px solid #e96891;
-  }
-  
-  .left-box h2 { font-family: "adobe-caslon-pro", serif;
-    font-weight: 700;
-    font-style: italic;
-    margin-bottom: 0rem; 
-    font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  .left-box p  {font-family: "forma-djr-micro", sans-serif; 
-    margin-bottom: 1rem; 
-    line-height: 1.4; }
 
+body {
+  background: #fbe2e4;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
 
-  .links-container {
-    font-family: "adobe-caslon-pro", serif;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 2.2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: auto;
-    width: 100%;
-  }
+/* Page title */
+.client-name {
+  font-family: "adobe-caslon-pro", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4.5rem;
+  margin: 2rem;
+  color: #e96891;
+}
 
-  .links-container a {
-    color: #e96891; 
-  }
-  
-  /* RIGHT COLUMN: vertical stack of folders */
-  .folder-column {
-    display: flex;
+/* Two‑column layout */
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+/* Biography box */
+.left-box {
+  position: sticky;
+  top: 2rem;
+  flex: 0 0 300px;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  border: 3px solid #e96891;
+}
+
+.left-box h2 {
+  font-family: "adobe-caslon-pro", serif;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.left-box p {
+  font-family: "forma-djr-micro", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.links-container {
+  font-family: "adobe-caslon-pro", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  width: 100%;
+}
+
+.links-container a {
+  color: #e96891;
+  text-decoration: none;
+}
+
+/* Right column containing the folders */
+.folder-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  padding: 0;
+}
+
+/* Textual swash ligatures – from original design */
+.swash-letter {
+  -moz-font-feature-settings: "swsh";
+  -webkit-font-feature-settings: "swsh";
+  font-feature-settings: "swsh" 1;
+}
+
+/* =============================================================
+   Custom folder components
+   Each project folder is built from a container with a tab and
+   body div.  Adjust the dimensions and margins here to fine‑tune
+   the overlapping effect.
+   ============================================================= */
+
+/* Remove underline from the entire folder link */
+.project-folder-link {
+  text-decoration: none;
+  /* Make the link itself a block element so the entire folder is clickable */
+  display: block;
+}
+
+/* Outer container for each folder */
+/* Outer container for each folder */
+.project-folder {
+  position: relative;
+  width: 40rem;
+  height: 16rem;
+  /* Pull subsequent folders upward to create an overlapping stack.  The overlap
+     distance is proportional to the height of each folder. */
+  margin-top: -8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ensure the first folder doesn’t overlap anything above it */
+.project-folder:first-of-type {
+  margin-top: 0;
+}
+
+/* Body of the folder */
+.project-folder .folder-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background-color: #f392aa;
+  border: 3px solid #e96891;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  z-index: 1;
+}
+
+/* Tab at the top of the folder */
+.project-folder .folder-tab {
+  position: absolute;
+  top: -3px;
+  left: 2rem;
+  width: 45%;
+  height: 25%;
+  background-color: #f392aa;
+  border: 3px solid #e96891;
+  border-bottom: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  z-index: 2;
+  /* Centre the label text inside the tab */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label text sitting on the folder body */
+.project-folder .folder-label {
+  /* When nested inside the tab the label does not need absolute
+     positioning.  We reuse the typographic styling here. */
+  position: static;
+  font-family: "forma-djr-micro", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #ffffff;
+  white-space: nowrap;
+  pointer-events: none; /* allow the link to be clickable without interference */
+}
+
+/* Hover effect that mimics the pop‑out animation from the original design */
+.project-folder:hover {
+  transform: translateY(-25px);
+  z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
     flex-direction: column;
-    align-items: center;
+    padding: 1rem;
     gap: 1rem;
-    flex: 1;
-    padding: 0rem 0;
   }
-  
-  /* Individual folder styling */
-  .folder {
-    width: 50rem; /* smaller than 50rem so they don't fill the screen */
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: -41rem;
-    
-    cursor: pointer;
-    z-index: 1;
+  .left-box {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 1rem;
   }
-
-  .folder:first-of-type { margin-top: 0; }
-  
-  .folder:hover {
-    transform: translateY(-25px);
-    z-index: 1;
+  .folder-column {
+    width: 100%;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
   }
-
-  .folder.active {
-    transform: translateY(-200px);  /* Adjust for a more pronounced pop-out effect */
-    z-index: 1000;                 /* Make sure it appears on top */
+  .project-folder {
+    width: 90%;
+    height: 14rem;
+    margin-top: 0;
   }
-
-
-
-
-
-  .swash-letter {
-    -moz-font-feature-settings: "swsh";
-    -webkit-font-feature-settings: "swsh";
-    font-feature-settings: "swsh" 1;
+  .project-folder .folder-label {
+    font-size: 1.6rem;
   }
-
-
-
-
-
-
-
-
-
-
-
-  @media (max-width: 768px) {
-    /* Convert main content from two columns to one */
-    .main-content {
-      flex-direction: column;
-      padding: 1rem;
-      gap: 1rem;
-    }
-  
-    /* Adjust left box to be full-width and repositioned */
-    .left-box {
-      position: relative;
-      top: 0;
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  
-    /* Adjust folder-column layout for mobile */
-    .folder-column {
-      width: 100%;
-      gap: 1rem;
-      padding: 0 1rem;
-      margin-top: 2rem;
-    }
-  
-    /* Scale down the folder size */
-    .folder {
-      width: 90%;  /* Use percentage for responsiveness */
-      margin-top: 0rem; /* Adjust overlap as needed for mobile */
-    }
-  
-    /* Optional: Remove or adjust hover effects since they may not apply on mobile */
-    .folder:hover {
-      transform: none;
-    }
-  
-    /* Active state can still work on tap */
-    .folder.active {
-      transform: translateY(-20px); /* Adjust the pop-out effect for mobile */
-    }
+  .project-folder:hover {
+    transform: none;
   }
+}
