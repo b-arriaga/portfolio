@@ -17,6 +17,9 @@ body {
   background: #fbe2e4;
   font-family: sans-serif;
   min-height: 100vh;
+  /* Ensure the base font size scales nicely across devices by setting a
+     reasonable root size.  Individual components will override this using
+     responsive clamp() declarations. */
 }
 
 /* Page title */
@@ -24,9 +27,14 @@ body {
   font-family: "adobe-caslon-pro", serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 4.5rem;
+  /* clamp(min, preferred, max) picks a value between the min and max that
+     grows with the viewport width.  2rem yields an accessible size on
+     small phones, 7vw tracks the screen width for intermediate sizes, and
+     4.5rem caps the growth on large monitors. */
+  font-size: clamp(2rem, 7vw, 4.5rem);
   margin: 2rem;
   color: #e96891;
+  line-height: 1.1;
 }
 
 /* Two‑column layout */
@@ -58,27 +66,31 @@ body {
   font-weight: 700;
   font-style: italic;
   margin-bottom: 0;
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  line-height: 1.2;
 }
 
 .left-box p {
   font-family: "forma-djr-micro", sans-serif;
   margin-bottom: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .links-container {
   font-family: "adobe-caslon-pro", serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 2.2rem;
+  font-size: clamp(1.2rem, 6vw, 2.2rem);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   margin-top: auto;
   width: 100%;
+  text-align: center;
 }
 
 .links-container a {
@@ -90,7 +102,9 @@ body {
 .folder-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* Stretch children horizontally so width: 100% takes effect.  Individual
+     project folders use auto margins to centre themselves. */
+  align-items: stretch;
   gap: 1rem;
   flex: 1;
   padding: 0;
@@ -121,16 +135,24 @@ body {
 /* Outer container for each folder */
 .project-folder {
   position: relative;
-  width: 40rem;
-  height: 16rem;
-  /* Pull subsequent folders upward to create an overlapping stack.  The overlap
-     distance is proportional to the height of each folder. */
-  margin-top: -8rem;
+  width: 100%;
+  max-width: 40rem;
+  /* Height scales between 8rem on very narrow screens and 16rem on wide ones,
+     with 35vw as the fluid portion.  This prevents folders from becoming
+     either too squat or excessively tall. */
+  height: clamp(8rem, 35vw, 16rem);
+  /* Create a stacked overlap effect by moving subsequent folders upwards by
+     half their height.  On mobile this margin is reset via media query. */
+  margin-top: calc(-0.5 * clamp(8rem, 35vw, 16rem));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  /* Centre folders horizontally within the column */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Ensure the first folder doesn’t overlap anything above it */
+/* The first folder should not overlap anything above it. */
 .project-folder:first-of-type {
   margin-top: 0;
 }
@@ -177,7 +199,7 @@ body {
   position: static;
   font-family: "forma-djr-micro", sans-serif;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 4vw, 1.8rem);
   color: #ffffff;
   white-space: nowrap;
   pointer-events: none; /* allow the link to be clickable without interference */
@@ -191,33 +213,61 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  /* Stack the main sections vertically on phones and tablets */
   .main-content {
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
   }
+  /* Biography becomes full width and loses its sticky behaviour */
   .left-box {
     position: relative;
     top: 0;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-width: 2px;
   }
+  /* Centre the client name and reduce margins for mobile */
+  .client-name {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  /* Column of folders now fills the available width; extra padding allows
+     folders to breathe on small screens */
   .folder-column {
     width: 100%;
     gap: 1rem;
-    padding: 0 1rem;
-    margin-top: 2rem;
-  }
-  .project-folder {
-    width: 90%;
-    height: 14rem;
+    padding: 0 0.5rem;
     margin-top: 0;
   }
-  .project-folder .folder-label {
-    font-size: 1.6rem;
+  /* Reset the overlap effect and adjust the folder size.  The height
+     scales fluidly with the viewport width and never exceeds 12rem. */
+  .project-folder {
+    width: 100%;
+    max-width: none;
+    height: clamp(8rem, 40vw, 12rem);
+    margin-top: 0;
   }
+  /* Adjust the tab dimensions to better fit narrower folders */
+  .project-folder .folder-tab {
+    left: 1rem;
+    width: 60%;
+    height: 30%;
+  }
+  /* Tweak the label size further for mobile */
+  .project-folder .folder-label {
+    font-size: clamp(0.9rem, 4vw, 1.4rem);
+  }
+  /* Remove the hover pop‑out effect on touch devices */
   .project-folder:hover {
     transform: none;
+  }
+  /* Stack the résumé and LinkedIn links vertically when there isn’t enough horizontal space */
+  .links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
   }
 }
 

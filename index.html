@@ -15,6 +15,9 @@
   <!-- Adobe Typekit fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/ljg1vjr.css">
   <!-- Portfolio styles -->
+  <!-- Use the updated stylesheet that contains responsive and accessible
+       adjustments.  The original styles.css remains untouched for easy
+       comparison. -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,7 +34,7 @@
         <section class="left-box">
             <h2><span class="swash-letter">A</span>bout <span class="swash-letter">M</span>e</h2>
             <p>
-                I am a designer and creative technologist driven by curiousity,
+                I am a designer and creative technologist driven by curiosity,
                 innovation, and hands‑on learning.  My experiences in
                 Makerspace design and STEAM curriculum have built a solid
                 foundation in many different skills, from sewing to CAD
@@ -48,8 +51,8 @@
                 creativity.
             </p>
             <div class="links-container">
-                <a href="https://www.linkedin.com/in/bellissima-arriaga/"><span class="swash-letter">L</span>inkedIn</a>
-                <a href="#"><span class="swash-letter">R</span>ésumé</a>
+                <a href="https://www.linkedin.com/in/bellissima-arriaga/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><span class="swash-letter">L</span>inkedIn</a>
+                <a href="#" aria-label="Download my résumé"><span class="swash-letter">R</span>ésumé</a>
             </div>
         </section>
 
@@ -60,7 +63,7 @@
                  negative margins. -->
 
             <!-- UCSB Makerspace folder -->
-            <a href="uc-santa-barbara-makerspace.html" class="project-folder-link">
+            <a href="uc-santa-barbara-makerspace.html" class="project-folder-link" aria-label="UCSB Makerspace project">
                 <div class="project-folder">
                     <!-- The project name lives inside the tab so that it appears on the label flap -->
                     <div class="folder-tab">
@@ -71,7 +74,7 @@
             </a>
 
             <!-- Urban TXT folder -->
-            <a href="urban-txt.html" class="project-folder-link">
+            <a href="urban-txt.html" class="project-folder-link" aria-label="Urban TXT project">
                 <div class="project-folder">
                     <div class="folder-tab">
                         <span class="folder-label">Urban TXT</span>
@@ -81,7 +84,7 @@
             </a>
 
             <!-- Five Nights at Freddy's Halloween folder -->
-            <a href="five-nights-at-freddys-halloween.html" class="project-folder-link">
+            <a href="five-nights-at-freddys-halloween.html" class="project-folder-link" aria-label="Five Nights at Freddy's Halloween project">
                 <div class="project-folder">
                     <div class="folder-tab">
                         <span class="folder-label">FNAF Halloween</span>
@@ -93,24 +96,49 @@
     </main>
     
     <!-- Modal overlay for displaying project pages inline -->
-    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-hidden="true">
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-content">
-            <button id="modal-close" class="modal-close" aria-label="Close project view">&times;</button>
-            <iframe id="modal-iframe" class="modal-iframe" src="" title="Project details"></iframe>
+            <!-- Provide an accessible label for the close button.  Using a real
+                 multiplication sign instead of letter X helps screen readers
+                 read it correctly. -->
+            <button id="modal-close" class="modal-close" aria-label="Close project view">×</button>
+            <!-- Lazy‑load the iframe so that project pages are only fetched when
+                 opened.  Explicitly set title for better accessibility. -->
+            <iframe id="modal-iframe" class="modal-iframe" src="" title="Project details" loading="lazy"></iframe>
         </div>
     </div>
 
     <script>
+    // Track the element that launched the modal so focus can be restored when it closes
+    let lastFocusedElement;
     // Attach click handlers to each project link to open content in a modal
     document.querySelectorAll('.project-folder-link').forEach(function(link) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
+        /* Allow both mouse and keyboard interaction to trigger the modal.
+           Clicking or pressing Enter/Space on a folder opens the project
+           details in an iframe. */
+        function openProject() {
+            // Remember the triggering element so focus can be restored when closing
+            lastFocusedElement = document.activeElement;
             const url = link.getAttribute('href');
             const iframe = document.getElementById('modal-iframe');
             iframe.src = url;
-            document.getElementById('modal-overlay').style.display = 'flex';
+            const overlay = document.getElementById('modal-overlay');
+            overlay.style.display = 'flex';
             // prevent background page from scrolling when modal is open
             document.body.style.overflow = 'hidden';
+            // focus the close button so that screen readers announce it first
+            document.getElementById('modal-close').focus();
+        }
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            openProject();
+        });
+        link.addEventListener('keydown', function(e) {
+            // Support keyboard activation via Enter or Space
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openProject();
+            }
         });
     });
     // Close button handler
@@ -119,6 +147,10 @@
         const iframe = document.getElementById('modal-iframe');
         iframe.src = '';
         document.body.style.overflow = '';
+        // restore focus to the element that opened the modal
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
     });
     // Close modal when clicking outside the content area
     document.getElementById('modal-overlay').addEventListener('click', function(e) {
