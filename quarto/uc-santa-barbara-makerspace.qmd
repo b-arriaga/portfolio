@@ -12,6 +12,10 @@ format:
 editor: source
 ---
 
+::: callout-note
+**Live webpage (for PDF readers):** <a href="https://www.bellissimaarriaga.com/portfolio/uc-santa-barbara-makerspace.html" target="_blank" rel="noopener">https://www.bellissimaarriaga.com/portfolio/uc-santa-barbara-makerspace.html</a>  
+:::
+
 ## Project Overview
 
 As lead space designer and head educator at the [UC Santa Barbara Library Makerspace](https://www.library.ucsb.edu/makerspace), I secured funding, designed, created, and built a makerspace that balances digital fabrication with traditional hand skills. Stakeholders were able to physically move scaled furniture on printed floor plans during planning sessions, helping prioritize accessibility and flexibility.

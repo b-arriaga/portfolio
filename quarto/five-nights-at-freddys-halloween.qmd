@@ -9,8 +9,13 @@ format:
     smooth-scroll: true
     anchor-sections: true
     page-layout: full
+    link-external-newwindow: true
 editor: source
 ---
+
+::: callout-note
+**Live webpage (for PDF readers):** <a href="https://www.bellissimaarriaga.com/portfolio/five-nights-at-freddys-halloween.html" target="_blank" rel="noopener">https://www.bellissimaarriaga.com/portfolio/five-nights-at-freddys-halloween.html</a>  
+:::
 
 ## Project Overview
 

@@ -12,6 +12,10 @@ format:
 editor: source
 ---
 
+::: callout-note
+**Live webpage (for PDF readers):** <a href="https://www.bellissimaarriaga.com/portfolio/urban-txt.html" target="_blank" rel="noopener">https://www.bellissimaarriaga.com/portfolio/urban-txt.html</a>  
+:::
+
 ## Project Overview
 
 Led the strategic vision and development of a 2,000 sq. ft. makerspace in South LA. Authored the master plan, floor plan, and phased implementation strategy, collaborating with Urban TXT leadership to create a studio that scales with program growth and teaches the tech skills local youth need to thrive.
@@ -26,7 +30,6 @@ To see more, <a href="https://www.instagram.com/stories/highlights/1792738181923
 -   Scalable Curriculum Development
 -   Strategic Planning for the Future of Learning
 
----
 
 ## Project Photos
 
